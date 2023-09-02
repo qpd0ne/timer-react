@@ -1,0 +1,16 @@
+.TimerButton {
+    height: 80px;
+    width: 80px;
+    background: #f3dddd;
+    border-radius: 40px;
+    border: 1px solid #625252;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+  }
+  
+  .TimerButton:hover {
+      cursor: pointer;
+  }
+  
