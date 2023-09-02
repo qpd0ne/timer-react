@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import BaseButton from "../BaseButton/BaseButton";
+import "./Timer.css";
 
 const Timer: React.FC = () => {
   const [milliseconds, setMilliseconds] = useState(0);
@@ -47,11 +49,13 @@ const Timer: React.FC = () => {
   };
 
   return (
-    <div>
-      <div>{formatTime(milliseconds)}</div>
-      <button onClick={startStopwatch}>Старт</button>
-      <button onClick={stopStopwatch}>Стоп</button>
-      <button onClick={resetStopwatch}>Сброс</button>
+    <div className="timer_ui">
+      <div className="numbers_block">{formatTime(milliseconds)}</div>
+      <div className="buttons_block">
+        <BaseButton onClick={startStopwatch}>Старт</BaseButton>
+        <BaseButton onClick={stopStopwatch}>Стоп</BaseButton>
+        <BaseButton onClick={resetStopwatch}>Сброс</BaseButton>
+      </div>
     </div>
   );
 };

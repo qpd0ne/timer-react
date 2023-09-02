@@ -1,7 +1,15 @@
-.BaseButton{
-    height: 100px;
-    width: 300px;
-    background: #f3dddd;
-    border-radius: 10px;
-    border: 1px;
+.BaseButton {
+  height: 60px;
+  width: 160px;
+  background: #f3dddd;
+  border-radius: 10px;
+  border: 1px solid #625252;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.BaseButton:hover {
+    cursor: pointer;
 }

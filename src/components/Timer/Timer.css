@@ -1,0 +1,25 @@
+.timer_ui {
+  height: 400px;
+  width: 70%;
+  border: 1px solid #3e3333;
+}
+
+.numbers_block {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 150px;
+    width: 100%;
+    height: 200px;
+}
+
+.buttons_block {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
