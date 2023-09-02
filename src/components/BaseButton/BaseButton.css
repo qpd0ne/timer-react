@@ -1,0 +1,7 @@
+.BaseButton{
+    height: 100px;
+    width: 300px;
+    background: #f3dddd;
+    border-radius: 10px;
+    border: 1px;
+}
