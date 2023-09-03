@@ -18,6 +18,15 @@
     margin: 6px;
 }
 
+.lap_list_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+}
+
 .seconds_block {
     width: 150px;
     font-size: 150px;

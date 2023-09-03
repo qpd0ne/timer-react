@@ -1,4 +1,5 @@
 import React, { FC, ReactNode } from "react";
+import "./ScrollDiv.css"
 
 interface ScrollDivProps {
     className: "classic_scroll",
