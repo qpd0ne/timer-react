@@ -1,16 +1,66 @@
-.TimerButton {
+.classic_button {
+  height: 80px;
+  width: 80px;
+  background: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #838383;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+}
+
+.classic_button:hover {
+  cursor: pointer;
+}
+
+.green_button {
+  height: 80px;
+  width: 80px;
+  background: #56ff78;
+  border-radius: 40px;
+  border: 2px solid #006605;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+}
+
+.green_button:hover {
+  cursor: pointer;
+}
+
+.red_button {
+    transition: 10s;
     height: 80px;
     width: 80px;
-    background: #f3dddd;
+    background: #ff4545;
     border-radius: 40px;
-    border: 1px solid #625252;
+    border: 2px solid #800000;
+    display: flex;
+    position: relative;
+    left: -40px;
+    margin: 2px;
+  }
+  
+  .red_button:hover {
+    cursor: pointer;
+    
+  }
+
+  .yellow_button {
+    height: 80px;
+    width: 160px;
+    background: #e6ff45;
+    border-radius: 40px;
+    border: 2px solid #ffee00;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5px;
+    margin: 2px;
   }
   
-  .TimerButton:hover {
-      cursor: pointer;
+  .yellow_button:hover {
+    cursor: pointer;
+    
   }
-  
