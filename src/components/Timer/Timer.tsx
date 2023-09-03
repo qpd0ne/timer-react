@@ -5,6 +5,9 @@ import ScrollDiv from "../ScrollDiv/ScrollDiv";
 import PlayIcon from "../../icons/PlayIcon/PlayIcon";
 import PauseIcon from "../../icons/PauseIcon/PauseIcon";
 import ArrowIcon from "../../icons/ArrowIcon/ArrowIcon";
+import LapFunc from "../StopWatch/LapFunc/LapFunc";
+import LapIcon from "../../icons/LapIcon/LapIcon";
+import TimerText from "../TimerText/TimerText";
 
 const Timer: React.FC = () => {
   const [milliseconds, setMilliseconds] = useState(0);
@@ -24,7 +27,7 @@ const Timer: React.FC = () => {
   }, [isRunning]);
 
   const lapStopwatch = () => {
-    setLap((prevLap) => [...prevLap, `Круг` ]);
+    setLap((prevLap) => [...prevLap, `${LapFunc(milliseconds)}`]);
   };
 
   const startStopwatch = () => {
@@ -69,6 +72,7 @@ const Timer: React.FC = () => {
             <TimerButton onClick={startStopwatch} className="red_button">
               <PauseIcon />
             </TimerButton>
+            <LapIcon />
           </TimerButton>
         )}
         <TimerButton onClick={resetStopwatch} className="classic_button">
@@ -78,9 +82,7 @@ const Timer: React.FC = () => {
       <div className="lap_list_block">
         <ScrollDiv className="classic_scroll">
           {lap.map((divText, index) => (
-            <div key={index} onClick={lapStopwatch}>
-              {divText}
-            </div>
+            <TimerText key={index} className="classic_timer_text">{divText}</TimerText>
           ))}
         </ScrollDiv>
       </div>

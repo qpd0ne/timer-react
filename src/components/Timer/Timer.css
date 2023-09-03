@@ -1,7 +1,6 @@
 .timer_ui {
   height: calc(100vh - 31px);
   width: 100%;
-  border: 1px solid #3e3333;
   margin-top: 30px;
 }
 

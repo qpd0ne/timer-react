@@ -39,7 +39,7 @@
     border: 2px solid #800000;
     display: flex;
     position: relative;
-    left: -40px;
+    left: -4px;
     margin: 2px;
   }
   
@@ -49,15 +49,17 @@
   }
 
   .yellow_button {
-    height: 80px;
+    height: 72px;
     width: 160px;
     background: #e6ff45;
     border-radius: 40px;
     border: 2px solid #ffee00;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: right;
     align-items: center;
     margin: 2px;
+    padding-right: 8px;
   }
   
   .yellow_button:hover {
