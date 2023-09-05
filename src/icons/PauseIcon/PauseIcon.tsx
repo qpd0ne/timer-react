@@ -1,5 +1,3 @@
-import React from "react";
-
 const PauseIcon = () => {
   return (
     <svg width="80px" height="80px" viewBox="-1 -1 26 26" fill="none">

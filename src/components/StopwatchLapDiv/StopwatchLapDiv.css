@@ -1,0 +1,9 @@
+.classic_stopwatch_text {
+  width: 300px;
+  min-height: 35px;
+  font-size: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,8 +1,6 @@
-import React from "react";
-
 const ArrowIcon = () => {
   return (
-    <svg width="100px" height="100px" viewBox="-9 -7.5 34.4 34.4" version="1.1">
+    <svg width="80px" height="80px" viewBox="-9 -7.5 34.4 34.4" version="1.1">
       <g stroke="none" strokeWidth="1" fill="none">
         <g transform="translate(-342.000000, -7080.000000)" fill="#000000">
           <g id="icons" transform="translate(56.000000, 160.000000)">

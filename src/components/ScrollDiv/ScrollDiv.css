@@ -1,21 +1,21 @@
 .classic_scroll {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    height: 100px;
-    box-sizing: border-box;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scrollbar-gutter: stable both-edges;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 110px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-gutter: stable both-edges;
 }
 
 ::-webkit-scrollbar {
-    width: 2px; /* Ширина полосы прокрутки */
-  }
+  width: 2px; /* Ширина полосы прокрутки */
+}
 
 .classic_scroll::-webkit-scrollbar-thumb {
-    background-color: #3a7782; /* Цвет полосы прокрутки */
-    border-radius: 6px; /* Скругление углов полосы */
-  }
+  background-color: #3a7782; /* Цвет полосы прокрутки */
+  border-radius: 6px; /* Скругление углов полосы */
+}

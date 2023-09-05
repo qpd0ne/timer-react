@@ -1,5 +1,3 @@
-import React from "react";
-
 const PlayIcon = () => {
   return (
     <svg width="66px" height="66px" viewBox="0 0 228 256" fill="#006605">
