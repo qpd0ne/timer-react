@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useSpring, animated } from "react-spring";
 import "./Timer.css";
 import TimerButton from "../TimerButton/TimerButton";
 import ScrollDiv from "../ScrollDiv/ScrollDiv";
@@ -8,12 +9,16 @@ import ArrowIcon from "../../icons/ArrowIcon/ArrowIcon";
 import LapFunc from "../StopWatch/LapFunc/LapFunc";
 import LapIcon from "../../icons/LapIcon/LapIcon";
 import TimerText from "../TimerText/TimerText";
-import DialDiv from "../DialDiv/DialDiv";
 
 const Timer: React.FC = () => {
   const [milliseconds, setMilliseconds] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const [lap, setLap] = useState<string[]>([]);
+
+  const { transform } = useSpring({
+    transform: `rotate(${isRunning ? milliseconds * 0.06 : 0}deg)`, // Каждая мс - 0.06 градусов
+    config: { tension: 100, friction: 20 },
+  });
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
@@ -53,9 +58,19 @@ const Timer: React.FC = () => {
 
     return (
       <div className="time_block">
-        <div className="minutes_block">{formattedMinutes}</div>
-        <div className="seconds_block">{formattedSeconds}</div>
-        <div className="milliseconds_block">{formattedMilliseconds}</div>
+        <div className="dial_block">
+          <animated.div
+            style={{
+              transform,
+            }}
+            className="dial_animated"
+          >
+            <div className="arrow_block" />
+          </animated.div>
+          <div className="minutes_block">{formattedMinutes}</div>
+          <div className="seconds_block">{formattedSeconds}</div>
+          <div className="milliseconds_block">{formattedMilliseconds}</div>
+        </div>
       </div>
     );
   };
@@ -91,7 +106,6 @@ const Timer: React.FC = () => {
           ))}
         </ScrollDiv>
       </div>
-      <DialDiv radius={50}/>
     </div>
   );
 };
