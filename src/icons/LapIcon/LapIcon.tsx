@@ -1,8 +1,8 @@
 const LapIcon = () => {
   return (
     <svg
-      width="800px"
-      height="800px"
+      width="80px"
+      height="80px"
       viewBox="0 0 24 24"
       fill="none"
     >

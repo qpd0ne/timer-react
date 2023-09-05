@@ -1,0 +1,22 @@
+.color-changing-clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  
+  .clock-face {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .tick {
+    position: absolute;
+    width: 4px;
+    height: 15px;
+    background-color: transparent;
+    transform-origin: 50% 100%;
+    transform: rotate(0deg);
+  }
