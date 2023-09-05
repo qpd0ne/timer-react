@@ -85,7 +85,7 @@ const Stopwatch: React.FC = () => {
                 <div className="none_button"/>
                 <StopwatchButton
                   onClick={startStopwatch}
-                  className="big_green_button green_button"
+                  className="big_green_button"
                 >
                   <PlayIcon />
                 </StopwatchButton>
