@@ -6,71 +6,25 @@
   align-items: center;
 }
 
-.time_block {
-  width: 100%;
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.lap_list_block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 400px;
-  margin-top: 20px;
-}
-
-.time_div_block {
-  min-height: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.buttons_lap_block {
+.stopwatch_block {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.minutes_block {
-  width: 50px;
-  font-size: 50px;
-  margin: 6px;
-}
-
-.seconds_block {
-  width: 50px;
-  font-size: 50px;
-  margin: 6px;
-}
-
-.milliseconds_block {
-  width: 20px;
-  font-size: 20px;
-  margin: 6px;
-}
-
-.buttons_block {
-  height: 150px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 515px;
+  height: 100vh;
 }
 
 .dial_block {
-  min-width: 250px;
-  min-height: 250px;
+  min-width: 510px;
+  max-width: 510px;
+  min-height: 510px;
+  max-height: 510px;
   border-radius: 50%;
-  border: 6px solid aqua;
+  border: 2px solid #ffffff;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -83,83 +37,77 @@
   align-items: center;
 }
 
+.arrow_block {
+  min-width: 3px;
+  min-height: 250px;
+  background-color: rgb(231, 154, 1);
+  position: absolute;
+  border-radius: 8px;
+  margin-bottom: 100px;
+  left: 0%;
+  transform: translateY(0%);
+  transform: translateX(0%);
+  transform-origin: center center;
+}
+
+.time_and_buttons_block {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.lap_reset_buttons_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time_div_block {
+  min-height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.minutes_block {
+  width: 60px;
+  font-size: 50px;
+  margin: 1px;
+}
+
+.seconds_block {
+  width: 52px;
+  font-size: 50px;
+  margin: 1px;
+}
+
+.milliseconds_block {
+  text-align: start;
+  width: 60px;
+  font-size: 50px;
+  margin: 1px;
+}
+
+.start_stop_buttons_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lap_list_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 110px;
+  margin-top: 0;
+}
+
 @media only screen and (min-width: 980px) and (max-width: 1920px) {
-  .stopwatch_block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 515px;
-    height: 100vh;
-  }
-
-  .time_block {
-    height: 100vh;
-  }
-
-  .time_and_buttons_block {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  .time_div_block {
-    min-height: 50px;
-    color: #ffffff;
-  }
-
-  .buttons_block {
-    height: 300px;
-    margin-bottom: 30px;
-  }
-
-  .lap_list_block {
-    width: 200px;
-    height: 110px;
-    margin-top: 0;
-  }
-
-  .minutes_block {
-    width: 60px;
-    font-size: 50px;
-    margin: 1px;
-  }
-
-  .seconds_block {
-    width: 52px;
-    font-size: 50px;
-    margin: 1px;
-  }
-
-  .milliseconds_block {
-    text-align: start;
-    width: 60px;
-    font-size: 50px;
-    margin: 1px;
-  }
-
-  .dial_block {
-    min-width: 510px;
-    max-width: 510px;
-    min-height: 510px;
-    max-height: 510px;
-    border: 2px solid #ffffff;
-    flex-direction: column;
-  }
-
-  .arrow_block {
-    min-width: 3px;
-    min-height: 250px;
-    background-color: rgb(231, 154, 1);
-    position: absolute;
-    border-radius: 8px;
-    margin-bottom: 100px;
-    left: 0%;
-    transform: translateY(0%);
-    transform: translateX(0%);
-    transform-origin: center center;
-  }
+  
 }
