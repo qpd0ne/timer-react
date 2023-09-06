@@ -45,19 +45,3 @@
 .red_button:hover {
   cursor: pointer;
 }
-
-.yellow_button {
-  height: 80px;
-  width: 80px;
-  background: #e6ff45;
-  border-radius: 40px;
-  border: 1px solid #ffee00;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2px;
-}
-
-.yellow_button:hover {
-  cursor: pointer;
-}

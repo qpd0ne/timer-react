@@ -9,6 +9,7 @@ import ArrowIcon from "../../icons/ArrowIcon/ArrowIcon";
 import LapFunc from "./LapFunc/LapFunc";
 import LapIcon from "../../icons/LapIcon/LapIcon";
 import StopwatchLapDiv from "../StopwatchLapDiv/StopwatchLapDiv";
+import DialDiv from "../../icons/Dial/Dial";
 
 const Stopwatch: React.FC = () => {
   const [milliseconds, setMilliseconds] = useState(0); // Состояние мсю
@@ -17,7 +18,7 @@ const Stopwatch: React.FC = () => {
 
   // Анимация циферблата относительно мс.
   const { transform } = useSpring({
-    transform: `rotate(${isRunning ? milliseconds * 0.06 : 0}deg)`, // Каждая мс - 0.06 градусов
+    transform: `rotate(${isRunning ? (180.3 + milliseconds * 0.06) : 180.3}deg)`, // Каждая мс - 0.06 градусов
     config: { tension: 100, friction: 20 },
   });
 
@@ -63,71 +64,58 @@ const Stopwatch: React.FC = () => {
       fmilliseconds < 10 ? `0${fmilliseconds}` : fmilliseconds;
 
     return (
-      <div className="time_block">
+      <>
         <div className="dial_block">
-          <animated.div
-            style={{
-              transform,
-            }}
-            className="dial_animated"
-          >
+          <animated.div style={{ transform }} className="dial_animated">
             <div className="arrow_block" />
           </animated.div>
-          <div className="format_time">
-            <div className="minutes_block">{formattedMinutes}'</div>
-            <div className="seconds_block">{formattedSeconds}</div>
-            <div className="milliseconds_block">'{formattedMilliseconds}</div>
-          </div>
-          <div className="buttons_lap_block">
-            <div className="buttons_block">
-              {!isRunning ? (
-                <>
-                  <div className="none_button" />
-                  <StopwatchButton
-                    onClick={startStopwatch}
-                    className="big_green_button"
-                  >
-                    <PlayIcon />
-                  </StopwatchButton>
-                </>
-              ) : (
-                <>
-                  <StopwatchButton
-                    onClick={lapStopwatch}
-                    className="yellow_button"
-                  >
-                    <LapIcon />
-                  </StopwatchButton>
-                  <StopwatchButton
-                    onClick={startStopwatch}
-                    className="big_red_button"
-                  >
-                    <PauseIcon />
-                  </StopwatchButton>
-                </>
-              )}
+          <DialDiv />
+        </div>
+        <div className="time_and_buttons_block">
+          <div className="lap_reset_buttons_block">
+            {!isRunning ? (
               <StopwatchButton
                 onClick={resetStopwatch}
                 className="classic_button"
               >
                 <ArrowIcon />
               </StopwatchButton>
-            </div>
-            <div className="lap_list_block">
-              <ScrollDiv className="classic_scroll">
-                {lap.map((divText, index) => (
-                  <StopwatchLapDiv
-                    key={index}
-                    className="classic_stopwatch_text"
-                  >
-                    {divText}
-                  </StopwatchLapDiv>
-                ))}
-              </ScrollDiv>
-            </div>
+            ) : (
+              <StopwatchButton onClick={lapStopwatch} className="classic_button">
+                <LapIcon />
+              </StopwatchButton>
+            )}
+          </div>
+          <div className="time_div_block">
+            <div className="minutes_block">{formattedMinutes}:</div>
+            <div className="seconds_block">{formattedSeconds}</div>
+            <div className="milliseconds_block">,{formattedMilliseconds}</div>
+          </div>
+          <div className="start_stop_buttons_block">
+            {!isRunning ? (
+              <StopwatchButton
+                onClick={startStopwatch}
+                className="green_button"
+              >
+                <PlayIcon />
+              </StopwatchButton>
+            ) : (
+              <StopwatchButton onClick={startStopwatch} className="red_button">
+                <PauseIcon />
+              </StopwatchButton>
+            )}
           </div>
         </div>
-      </div>
+        <div className="lap_list_block">
+          <ScrollDiv className="classic_scroll">
+            {lap.map((divText, index) => (
+              <StopwatchLapDiv key={index} className="classic_stopwatch_text">
+                {divText}
+              </StopwatchLapDiv>
+            ))}
+          </ScrollDiv>
+        </div>
+      </>
     );
   };
 

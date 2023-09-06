@@ -6,7 +6,6 @@ interface StopwatchButtonProps {
   onClick?: () => void;
   className?: string
     | "green_button"
-    | "yellow_button"
     | "red_button"
     | "classic_button"
 }
