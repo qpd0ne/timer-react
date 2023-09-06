@@ -1,6 +1,12 @@
-const DialDiv = () => {
+import { FC } from "react";
+
+interface DialDivProps {
+  className: string;
+}
+
+const DialDiv:FC<DialDivProps> = ({className}) => {
   return (
-    <svg width="500" height="500" viewBox="0 0 14002 14002" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 14002 14002" fill="none" xmlns="http://www.w3.org/2000/svg">
 <line x1="6987.03" y1="45.8688" x2="6988.56" y2="225.862" stroke="#E9E9E9" stroke-width="90" stroke-linecap="round"/>
 <line x1="6804.97" y1="48.6175" x2="6811.21" y2="228.509" stroke="#E9E9E9" stroke-width="90" stroke-linecap="round"/>
 <line x1="6623.04" y1="56.1314" x2="6633.99" y2="235.798" stroke="#E9E9E9" stroke-width="90" stroke-linecap="round"/>

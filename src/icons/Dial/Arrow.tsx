@@ -7,8 +7,7 @@ interface ArrowProps {
 const Arrow: FC<ArrowProps> = ({ className }) => {
   return (
     <svg
-      width="12.4599502"
-      height="500"
+      className={className}
       viewBox="0 0 350 14045"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

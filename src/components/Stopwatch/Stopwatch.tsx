@@ -70,7 +70,7 @@ const Stopwatch: React.FC = () => {
           <animated.div style={{ transform }} className="dial_animated">
             <Arrow className="arrow_block"/>
           </animated.div>
-          <DialDiv />
+          <DialDiv className="dial_size_block"/>
         </div>
         <div className="time_and_buttons_block">
           <div className="lap_reset_buttons_block">
