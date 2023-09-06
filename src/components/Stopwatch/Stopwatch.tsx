@@ -82,15 +82,14 @@ const Stopwatch: React.FC = () => {
             <div className="buttons_block">
               {!isRunning ? (
                 <>
-                <div className="none_button"/>
-                <StopwatchButton
-                  onClick={startStopwatch}
-                  className="big_green_button"
-                >
-                  <PlayIcon />
-                </StopwatchButton>
+                  <div className="none_button" />
+                  <StopwatchButton
+                    onClick={startStopwatch}
+                    className="big_green_button"
+                  >
+                    <PlayIcon />
+                  </StopwatchButton>
                 </>
-                
               ) : (
                 <>
                   <StopwatchButton
