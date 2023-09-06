@@ -75,23 +75,12 @@
   align-items: center;
 }
 
-.arrow_block {
-  min-width: 6px;
-  min-height: 10px;
-  background-color: red;
-  position: absolute;
-  border-radius: 6px;
-  margin-top: 90px;
-  left: 0%;
-  transform: translateY(90%);
-  transform-origin: center bottom;
-}
-
 .dial_animated {
   position: absolute;
-  top: 50%;
-  left: 50%;
   transform-origin: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (min-width: 980px) and (max-width: 1920px) {
@@ -103,7 +92,7 @@
     width: 515px;
     height: 100vh;
   }
-  
+
   .time_block {
     height: 100vh;
   }
@@ -162,15 +151,15 @@
   }
 
   .arrow_block {
-    min-width: 2px;
+    min-width: 3px;
     min-height: 250px;
-    background-color: red;
+    background-color: rgb(231, 154, 1);
     position: absolute;
     border-radius: 8px;
-    margin-top: 0px;
+    margin-bottom: 100px;
     left: 0%;
     transform: translateY(0%);
     transform: translateX(0%);
-    transform-origin: center bottom;
+    transform-origin: center center;
   }
 }
