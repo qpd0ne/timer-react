@@ -89,8 +89,8 @@ const Stopwatch: React.FC = () => {
           </div>
           <div className="time_div_block">
             <div className="minutes_block">{formattedMinutes}:</div>
-            <div className="seconds_block">{formattedSeconds}</div>
-            <div className="milliseconds_block">,{formattedMilliseconds}</div>
+            <div className="seconds_block">{formattedSeconds},</div>
+            <div className="milliseconds_block">{formattedMilliseconds}</div>
           </div>
           <div className="start_stop_buttons_block">
             {!isRunning ? (

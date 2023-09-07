@@ -4,19 +4,31 @@
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  height: 110px;
+  height: 150px;
   box-sizing: border-box;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
   scrollbar-gutter: stable both-edges;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  
 }
 
-::-webkit-scrollbar {
-  width: 2px; /* Ширина полосы прокрутки */
+.classic_scroll:hover {
+  overflow-y: auto;
+}
+
+.classic_scroll::-webkit-scrollbar {
+  width: 2px;
 }
 
 .classic_scroll::-webkit-scrollbar-thumb {
-  background-color: #3a7782; /* Цвет полосы прокрутки */
-  border-radius: 6px; /* Скругление углов полосы */
+  background-color: #3a7782;
+  border-radius: 6px;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 844px) and (orientation: portrait) {
+  .classic_scroll {
+    height: 200px;
+  }
 }

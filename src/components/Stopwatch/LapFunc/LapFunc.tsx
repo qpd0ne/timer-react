@@ -8,7 +8,7 @@ const LapFunc = (time: number) => {
   const formattedMilliseconds =
     fmilliseconds < 10 ? `0${fmilliseconds}` : fmilliseconds;
 
-  return `${formattedMinutes}:${formattedSeconds}:${formattedMilliseconds}`;
+  return `${formattedMinutes}:${formattedSeconds},${formattedMilliseconds}`;
 };
 
 export default LapFunc;
