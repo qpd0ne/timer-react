@@ -45,3 +45,23 @@
 .red_button:hover {
   cursor: pointer;
 }
+
+@media only screen and (min-width: 250px) and (max-width: 339px) and (orientation: portrait) {
+  .classic_button {
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+  }
+
+  .green_button {
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+  }
+
+  .red_button {
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+  }
+}

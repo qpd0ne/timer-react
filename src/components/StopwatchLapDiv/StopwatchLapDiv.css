@@ -10,3 +10,10 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+
+@media only screen and (min-width: 250px) and (max-width: 339px) and (orientation: portrait) {
+  .classic_stopwatch_text {
+    min-height: 20px;
+    font-size: 15px;
+  }
+}
