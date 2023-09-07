@@ -22,8 +22,14 @@
   border-radius: 6px;
 }
 
-@media only screen and (min-width: 360px) and (max-width: 844px) and (orientation: portrait) {
+@media only screen and (min-width: 380px) and (max-width: 844px) and (orientation: portrait) {
   .classic_scroll {
     height: 200px;
+  }
+}
+
+@media only screen and (min-width: 340px) and (max-width: 379px) and (orientation: portrait) {
+  .classic_scroll {
+    height: 100px;
   }
 }

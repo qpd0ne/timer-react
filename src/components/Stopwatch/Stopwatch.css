@@ -104,7 +104,58 @@
   height: max-content;
 }
 
-@media only screen and (min-width: 360px) and (max-width: 844px) and (orientation: portrait) {
+@media only screen and (min-width: 380px) and (max-width: 844px) and (orientation: portrait) {
+  .stopwatch_ui {
+    height: 100vh;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .stopwatch_block {
+    min-width: 350px;
+    margin-top: 15px;
+  }
+
+  .dial_block {
+    min-width: 90%;
+  }
+
+  .dial_size_block {
+    min-height: 330px;
+    min-width: 330px;
+  }
+
+  .arrow_block {
+    height: 330px;
+  }
+
+  .time_and_buttons_block {
+    width: 100%;
+  }
+
+  .minutes_block {
+    width: 48px;
+    font-size: 30px;
+    margin: 1px;
+  }
+
+  .seconds_block {
+    width: 48px;
+    font-size: 30px;
+    margin: 1px;
+  }
+
+  .milliseconds_block {
+    text-align: start;
+    width: 38px;
+    font-size: 30px;
+    margin: 1px;
+  }
+}
+
+@media only screen and (min-width: 340px) and (max-width: 379px) and (orientation: portrait) {
   .stopwatch_ui {
     height: 100vh;
     min-width: 100%;
