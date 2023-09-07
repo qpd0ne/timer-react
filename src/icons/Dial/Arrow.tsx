@@ -34,7 +34,7 @@ const Arrow: FC<ArrowProps> = ({ className }) => {
         x2="174.976"
         y2="-1.09321e-09"
         stroke="black"
-        stroke-width="0.005"
+        stroke-width="0"
       />
     </svg>
   );

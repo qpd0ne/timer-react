@@ -19,7 +19,7 @@ const Stopwatch: React.FC = () => {
 
   // Анимация циферблата относительно мс.
   const { transform } = useSpring({
-    transform: `rotate(${isRunning ? (180 + milliseconds * 0.06) : 180}deg)`, // Каждая мс - 0.06 градусов
+    transform: `rotate(${isRunning ? 180 + milliseconds * 0.06 : 180}deg)`, // Каждая мс - 0.06 градусов
     config: { tension: 100, friction: 20 },
   });
 
@@ -68,9 +68,9 @@ const Stopwatch: React.FC = () => {
       <>
         <div className="dial_block">
           <animated.div style={{ transform }} className="dial_animated">
-            <Arrow className="arrow_block"/>
+            <Arrow className="arrow_block" />
           </animated.div>
-          <DialDiv className="dial_size_block"/>
+          <DialDiv className="dial_size_block" />
         </div>
         <div className="time_and_buttons_block">
           <div className="lap_reset_buttons_block">
@@ -82,7 +82,10 @@ const Stopwatch: React.FC = () => {
                 <ArrowIcon />
               </StopwatchButton>
             ) : (
-              <StopwatchButton onClick={lapStopwatch} className="classic_button">
+              <StopwatchButton
+                onClick={lapStopwatch}
+                className="classic_button"
+              >
                 <LapIcon />
               </StopwatchButton>
             )}
