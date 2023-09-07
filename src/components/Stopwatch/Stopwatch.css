@@ -16,10 +16,7 @@
 }
 
 .dial_block {
-  min-width: 510px;
-  /* max-width: 510px; */
-  min-height: 510px;
-  /* max-height: 510px; */
+  min-width: 100%;
   border-radius: 50%;
   border: 2px solid #ffffff;
   position: relative;
@@ -70,6 +67,7 @@
   justify-content: center;
   align-items: center;
   color: #ffffff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .minutes_block {
@@ -106,16 +104,13 @@
   margin-top: 0;
 }
 
-@media only screen and (min-width: 390px) and (max-width: 844px) and (orientation: portrait) {
+@media only screen and (min-width: 375px) and (max-width: 844px) and (orientation: portrait) {
   .stopwatch_block {
-    min-width: 380px;
+    min-width: 375px;
   } 
 
   .dial_block {
-    min-width: 360px;
-    max-width: 360px;
-    min-height: 360px;
-    max-height: 360px;
+    min-width: 90%;
   }
 
   .dial_size_block {
@@ -124,7 +119,44 @@
   }
 
   .arrow_block {
-    min-width: 12.4599502px;
-    height: 360px;
+    height: 350px;
+  }
+}
+
+@media only screen and (min-width: 360px) and (orientation: portrait) {
+  .stopwatch_block {
+    min-width: 350px;
+  } 
+
+  .dial_block {
+    min-width: 90%;
+  }
+
+  .dial_size_block {
+    min-height: 330px;
+    min-width: 330px;
+  }
+
+  .arrow_block {
+    height: 330px;
+  }
+
+  .minutes_block {
+    width: 50px;
+    font-size: 40px;
+    margin: 1px;
+  }
+  
+  .seconds_block {
+    width: 42px;
+    font-size: 40px;
+    margin: 1px;
+  }
+  
+  .milliseconds_block {
+    text-align: start;
+    width: 50px;
+    font-size: 40px;
+    margin: 1px;
   }
 }
